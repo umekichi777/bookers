@@ -1,3 +1,8 @@
+<%= flash[:complete] %>
+
 <p>Title: <span><%= @book.title %></span></p>
 
 <p>Body: <span><%= @book.body %></span></p>
+
+<%= link_to "Edit", edit_book_path %>
+<%= link_to "Back", :back %>
