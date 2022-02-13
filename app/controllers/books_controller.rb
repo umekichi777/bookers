@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
   def new
     @book = Book.new
-  end
+  end 
   
   def create
     @book = Book.new(book_params)
@@ -38,8 +38,9 @@ class BooksController < ApplicationController
   
   def destroy
     book = Book.find(params[:id])
-    flash[:complete] = "Book was successfully destroy."
     book.destroy
+    flash[:complete] = "Book was successfully destroy."
+    redirect_to books
   end
   
   
